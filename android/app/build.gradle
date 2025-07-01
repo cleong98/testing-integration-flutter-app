@@ -94,6 +94,10 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
+        ndk {
+            // Filter for architectures supported by Flutter
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86_64"
+        }
     }
     signingConfigs {
         debug {
@@ -148,6 +152,12 @@ android {
 }
 
 dependencies {
+
+    // Your module’s UI code
+    debugImplementation('com.example.flutter_counter:flutter_debug:1.0')
+    releaseImplementation('com.example.flutter_counter:flutter_release:1.0')
+
+
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 

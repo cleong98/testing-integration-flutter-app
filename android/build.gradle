@@ -20,11 +20,20 @@ def reactNativeAndroidDir = new File(
   "../android"
 )
 
+def storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
+
 allprojects {
   repositories {
     maven {
       // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
       url(reactNativeAndroidDir)
+    }
+    maven {
+      url = uri("$rootDir/../flutter_counter/build/host/outputs/repo")
+    }
+
+    maven {
+      url "$storageUrl/download.flutter.io"
     }
 
     google()
