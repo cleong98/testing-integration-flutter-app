@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useCounter } from "@/store/counter";
 import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
-  const [counter, setCounter] = useState(0);
+  
+  const counter = useCounter((state) => state.counter);
+  const increment = useCounter((state) => state.increaseCounter);
 
   return (
     <View style={[styles.container]}>
       <Text>Counter</Text>
       <Text>{counter}</Text>
-      <Button title="+1" onPress={() => setCounter(counter + 1)} />
+      <Button title="+1" onPress={increment} />
     </View>
   );
 }
