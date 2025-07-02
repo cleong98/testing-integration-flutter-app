@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoFlutterBridgeModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.flutterbridge.ExpoFlutterBridgeModule"]
+  }
+}

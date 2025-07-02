@@ -29,6 +29,9 @@ importers:
       expo-constants:
         specifier: ~17.1.6
         version: 17.1.6(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))
+      expo-flutter-bridge:
+        specifier: file:./expo-flutter-bridge
+        version: file:expo-flutter-bridge(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
       expo-font:
         specifier: ~13.3.1
         version: 13.3.1(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -1949,6 +1952,13 @@ packages:
     resolution: {integrity: sha512-SyaWg+HitScLuyEeSG9gMSDT0hIxbM9jiZjSBP9l9zMnwZjmQwsusE6+7qGiddxJzdOhTP4YGUfvEzeeS0YL3Q==}
     peerDependencies:
       expo: '*'
+      react-native: '*'
+
+  expo-flutter-bridge@file:expo-flutter-bridge:
+    resolution: {directory: expo-flutter-bridge, type: directory}
+    peerDependencies:
+      expo: '*'
+      react: '*'
       react-native: '*'
 
   expo-font@13.3.1:
@@ -6389,6 +6399,12 @@ snapshots:
   expo-file-system@18.1.10(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)):
     dependencies:
       expo: 53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
+      react-native: 0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)
+
+  expo-flutter-bridge@file:expo-flutter-bridge(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      expo: 53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
       react-native: 0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)
 
   expo-font@13.3.1(expo@53.0.13(@babel/core@7.27.7)(@expo/metro-runtime@5.0.4(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.7)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react@19.0.0):

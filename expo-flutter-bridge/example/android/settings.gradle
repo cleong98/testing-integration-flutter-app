@@ -31,12 +31,9 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
 }
 expoAutolinking.useExpoModules()
 
-rootProject.name = 'testing-integration-flutter-app'
+rootProject.name = 'expo-flutter-bridge-example'
 
 expoAutolinking.useExpoVersionCatalog()
 
 include ':app'
 includeBuild(expoAutolinking.reactNativeGradlePlugin)
-
-include ':expo-flutter-bridge'
-project(':expo-flutter-bridge').projectDir = file('../expo-flutter-bridge/android')

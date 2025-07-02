@@ -1,7 +1,8 @@
 import { useCounter } from "@/store/counter";
-import { Button, NativeModules, StyleSheet, Text, View } from "react-native";
+import FlutterBridge from 'expo-flutter-bridge';
+import { Button, StyleSheet, Text, View } from "react-native";
 
-const { FlutterBridge } = NativeModules;
+// const { FlutterBridge } = NativeModules;
 export default function HomeScreen() {
   const counter = useCounter((state) => state.counter);
   const increment = useCounter((state) => state.increaseCounter);
@@ -14,7 +15,7 @@ export default function HomeScreen() {
       <Button
         title="test flutter ui"
         onPress={() => {
-          FlutterBridge.openFlutter();
+         FlutterBridge.openCounter();
         }}
       />
     </View>
