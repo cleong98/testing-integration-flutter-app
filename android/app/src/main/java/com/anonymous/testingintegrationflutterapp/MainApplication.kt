@@ -49,13 +49,13 @@ class MainApplication : Application(), ReactApplication {
     super.onCreate()
 
     //initialize flutter engine
-    val flutterEngine = FlutterEngine(this)
-
-    flutterEngine.dartExecutor.executeDartEntrypoint(DartEntrypoint.createDefault())
-
-    FlutterEngineCache
-      .getInstance()
-      .put("flutter_counter", flutterEngine)
+//    val flutterEngine = FlutterEngine(this)
+//
+//    flutterEngine.dartExecutor.executeDartEntrypoint(DartEntrypoint.createDefault())
+//
+//    FlutterEngineCache
+//      .getInstance()
+//      .put("flutter_counter", flutterEngine)
 
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {

@@ -10,10 +10,15 @@ class FlutterBridgeModule(reactContext: ReactApplicationContext)
 
     @ReactMethod
     fun openFlutter() {
-        val intent = FlutterActivity
-            .withCachedEngine("flutter_counter")
-            .build(currentActivity!!)
+//        val intent = FlutterActivity
+//            .withCachedEngine("flutter_counter")
+//            .build(currentActivity!!)
+//        currentActivity!!.startActivity(intent)
+
+        val intent = FlutterActivity.withNewEngine().build(currentActivity!!)
+
         currentActivity!!.startActivity(intent)
+
     }
 
     override fun getName() = "FlutterBridge"
