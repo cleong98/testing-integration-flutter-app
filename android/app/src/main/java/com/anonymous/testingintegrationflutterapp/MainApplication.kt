@@ -16,10 +16,6 @@ import com.facebook.soloader.SoLoader
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
 
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.embedding.engine.FlutterEngineCache
-import io.flutter.embedding.engine.dart.DartExecutor.DartEntrypoint
-
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost = ReactNativeHostWrapper(
@@ -47,15 +43,6 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
-
-    //initialize flutter engine
-//    val flutterEngine = FlutterEngine(this)
-//
-//    flutterEngine.dartExecutor.executeDartEntrypoint(DartEntrypoint.createDefault())
-//
-//    FlutterEngineCache
-//      .getInstance()
-//      .put("flutter_counter", flutterEngine)
 
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
